@@ -23,17 +23,17 @@ public class Employee {
     private String secondName;
 
     //The minimum age for an employee is 18, and maximum is 65
-    @Column
     @Min(18)
     @Max(65)
+    @Column(nullable = false)
     private int age;
 
     //The validation returns true as long as there is an @ symbol in the email address
-    @Column
     @Pattern(regexp = "^(.+)@(\\\\S+)$")
+    @Column(nullable = false)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String gender;
 
     //Default constructor
