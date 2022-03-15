@@ -120,6 +120,7 @@ public class Employee {
                 '}';
     }
 
+    //More for testing when comparing objects match
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
