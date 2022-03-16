@@ -8,7 +8,7 @@ public interface ServiceMethods<T> {
     T create(T employee);
 
     //Read All
-    List<T> realAll();
+    List<T> readAll();
 
     //Read By ID
     T readById(long id);
