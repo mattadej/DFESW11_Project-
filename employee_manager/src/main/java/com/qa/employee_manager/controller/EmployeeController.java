@@ -30,7 +30,7 @@ public class EmployeeController {
     @GetMapping("/readAll")
     // We return a list because the readAll method in the service class returns a
     // list also
-    public ResponseEntity<List<Employee>> readAllDucks() {
+    public ResponseEntity<List<Employee>> readAllEmployees() {
         return new ResponseEntity<List<Employee>>(this.service.readAll(), HttpStatus.OK);
     }
 
@@ -46,7 +46,7 @@ public class EmployeeController {
     @PutMapping("/update/{id}")
     // update requires both RequestBody and PathVariable as it takes in the id, and
     // also passes through the new object information
-    public ResponseEntity<Employee> updateDuck(@PathVariable long id, @RequestBody Employee employee) {
+    public ResponseEntity<Employee> updateEmployee(@PathVariable long id, @RequestBody Employee employee) {
         return new ResponseEntity<Employee>(this.service.update(id, employee), HttpStatus.ACCEPTED);
     }
 
