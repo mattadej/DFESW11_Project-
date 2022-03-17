@@ -2,6 +2,7 @@ package com.qa.employee_manager.controller;
 
 import com.qa.employee_manager.entity.Employee;
 import com.qa.employee_manager.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,8 @@ public class EmployeeController {
 
     private EmployeeService service;
 
+    @Autowired
+    //instructs Spring to insert the DuckService object
     private EmployeeController(EmployeeService service) {
         this.service = service;
     }
