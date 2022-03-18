@@ -136,14 +136,13 @@ public class Employee {
     }
 
     //More for testing when comparing objects match
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return age == employee.age && firstName.equals(employee.firstName) &&
-                secondName.equals(employee.secondName) &&
-                Objects.equals(email, employee.email) && Objects.equals(gender, employee.gender);
+        return age == employee.age && Objects.equals(firstName, employee.firstName) && Objects.equals(secondName, employee.secondName) && Objects.equals(email, employee.email) && Objects.equals(gender, employee.gender);
     }
 
     @Override
