@@ -34,10 +34,7 @@ public class EmployeeService implements ServiceMethods<Employee> {
     @Override
     public Employee readById(long id) {
         Optional<Employee> getEmployee = this.repo.findById(id);
-        if(getEmployee.isPresent()) {
-            return getEmployee.get();
-        }
-        return null;
+        return getEmployee.orElse(null);
     }
 
     //When setting values, do not set the ID

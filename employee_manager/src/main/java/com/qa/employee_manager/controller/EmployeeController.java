@@ -16,8 +16,8 @@ public class EmployeeController {
     private EmployeeService service;
 
     @Autowired
-    //instructs Spring to insert the DuckService object
-    private EmployeeController(EmployeeService service) {
+    //instructs Spring to insert the EmployeeService object
+    public EmployeeController(EmployeeService service) {
         this.service = service;
     }
 
